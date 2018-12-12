@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+       "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+       "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- DataSource Information -->
+		<property name="hibernate.connection.url">
+		jdbc:postgresql://postgresqldbs.cgcbt7fk8xao.us-east-2.rds.amazonaws.com:5432/Postgresqldbs?
+		</property>
+		<property name="hibernate.connection.username">
+		</property>
+		<property name="hibernate.connection.password">
+		</property>
+		<!-- Dialect -->
+		<property name="hibernate.dialect">
+		org.hibernate.dialect.PostgreSQLDialect
+		</property>
+		<!-- Driver -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<!-- Settings -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.id.new_generator_mappings">false</property>
+		<!-- Mapped Classes -->
+		<mapping class="com.evoker.domain.Player"></mapping>
+		<mapping class="com.evoker.domain.Lineup"></mapping>
+		<mapping class="com.evoker.domain.Login"></mapping>
+		<mapping class="com.evoker.domain.Character"></mapping>
+	</session-factory>
+</hibernate-configuration>
