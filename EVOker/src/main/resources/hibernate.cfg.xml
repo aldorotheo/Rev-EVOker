@@ -21,10 +21,15 @@
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
 		<property name="hibernate.id.new_generator_mappings">false</property>
+		
 		<!-- Mapped Classes -->
 		<mapping class="com.evoker.domain.Player"></mapping>
-		<mapping class="com.evoker.domain.Lineup"></mapping>
 		<mapping class="com.evoker.domain.Login"></mapping>
-		<mapping class="com.evoker.domain.Character"></mapping>
+		<mapping class="com.evoker.domain.EVOCharacter"></mapping>
+		<mapping class="com.evoker.domain.Ruleset"></mapping>
+		<mapping class="com.evoker.domain.Tournament"></mapping>
+		<mapping class="com.evoker.domain.Judge"></mapping>
+		<mapping class="com.evoker.domain.Organizer"></mapping>
+		<mapping class="com.evoker.domain.Matchup"></mapping>
 	</session-factory>
 </hibernate-configuration>
