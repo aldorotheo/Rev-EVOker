@@ -1,0 +1,90 @@
+<h1>Please select your characters. </h1>
+<p>{{characterName}}</p>
+<h2>Current lineup:</h2>
+<ul>
+  <li *ngFor = "let character of lineup" class="lineuplist">{{character.charName}}</li>
+</ul>
+<div class="dropdown">
+   <!-- <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" [(ngModel)]="char">Character #1
+    <span class="caret"></span></button>-->
+    <select [(ngModel)]="characterName">
+      <option class = "dropdown-item" value="Mario">Mario</option>
+      <option value="Donkey Kong">Donkey Kong</option>
+      <option value="Link">Link</option>
+      <option value="Samus">Samus</option>
+      <option value="Dark Samus">Dark Samus</option>
+      <option value="Yoshi">Yoshi</option>
+      <option value="Kirby">Kirby</option>
+      <option value="Fox">Fox</option>
+      <option value="Pikachu">Pikachu</option>
+      <option value="Luigi">Luigi</option>
+      <option value="Ness">Ness</option>
+      <option value="Captain Falcon">Captain Falcon</option>
+      <option value="Jigglypuff">Jigglypuff</option>
+      <option value="Peach">Peach</option>
+      <option value="Daisy">Daisy</option>
+      <option value="Bowser">Bowser</option>
+      <option value="Ice Climbers">Ice Climbers</option>
+      <option value="Sheik">Sheik</option>
+      <option value="Zelda">Zelda</option>
+      <option value="Dr. Mario">Dr. Mario</option>
+      <option value="Pichu">Pichu</option>
+      <option value="Falco">Falco</option>
+      <option value="Marth">Marth</option>
+      <option value="Lucina">Lucina</option>
+      <option value="Young Link">Young Link</option>
+      <option value="Ganondorf">Ganondorf</option>
+      <option value="Mewtwo">Mewtwo</option>
+      <option value="Roy">Roy</option>
+      <option value="Chrom">Chrom</option>
+      <option value="Mr. Game & Watch">Mr. Game & Watch</option>
+      <option value="Meta Knight">Meta Knight</option>
+      <option value="Pit">Pit</option>
+      <option value="Dark Pit">Dark Pit</option>
+      <option value="Zero Suit Samus">Zero Suit Samus</option>
+      <option value="Wario">Wario</option>
+      <option value="Snake">Snake</option>
+      <option value="Ike">Ike</option>
+      <option value="Pokemon Trainer">Pokemon Trainer</option>
+      <option value="Diddy Kong">Diddy Kong</option>
+      <option value="Lucas">Lucas</option>
+      <option value="Sonic">Sonic</option>
+      <option value="Olimar">Olimar</option>
+      <option value="Lucario">Lucario</option>
+      <option value="R.O.B.">R.O.B</option>
+      <option value="Toon Link">Toon Link</option>
+      <option value="Wolf">Wolf</option>
+      <option value="Villager">Villager</option>
+      <option value="Mega Man">Mega Man</option>
+      <option value="Wii Fit Trainer">Wii Fit Trainer</option>
+      <option value="Rosalina & Luma">Rosalina & Luma</option>
+      <option value="Little Mac">Little Mac</option>
+      <option value="Greninja">Greninja</option>
+      <option value="Palutena">Palutena</option>
+      <option value="Pac-Man">Pac-Man</option>
+      <option value="Robin">Robin</option>
+      <option value="Shulk">Shulk</option>
+      <option value="Bowser Jr.">Bowser Jr.</option>
+      <option value="Duck Hunt">Duck Hunt</option>
+      <option value="Ryu">Ryu</option>
+      <option value="Ken">Ken</option>
+      <option value="Cloud">Cloud</option>
+      <option value="Corrin">Corrin</option>
+      <option value="Bayonetta">Bayonetta</option>
+      <option value="Inkling">Inkling</option>
+      <option value="Ridley">Ridley</option>
+      <option value="King Dedede">King Dedede</option>
+      <option value="Simon">Simon</option>
+      <option value="Richter">Richter</option>
+      <option value="King K. Rool">King K. Rool</option>
+      <option value="Isabelle">Isabelle</option>
+      <option value="Incineroar">Incineroar</option>
+      <option value="Mii Brawler">Mii Brawler</option>
+      <option value="Mii Swordfighter">Mii Swordfighter</option>
+      <option value="Mii Gunner">Mii Gunner</option>
+    </select>
+      </div>
+      <br/>
+      <button class="btn btn-primary" id="addcharacter" (click)='addCharacter()'>Add Character to Lineup</button>
+      <br/>
+      <a routerLink="/player">Back to Player Menu</a>

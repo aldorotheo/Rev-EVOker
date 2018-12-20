@@ -1,0 +1,8 @@
+.lineuplist {
+    display: inline;
+    padding: 40px;
+    font-size:40px;
+}
+select, option {
+    background-color: black;
+}

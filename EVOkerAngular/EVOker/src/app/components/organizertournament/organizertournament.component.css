@@ -1,0 +1,33 @@
+.form-group {
+    text-align:left;
+    align-content: left;
+	width:400px;
+    color:#00ace6;
+	padding: 10px;
+}
+input[type="text"], textarea {
+
+    background-color : #262626; 
+    color: #00ace6;
+  
+  }
+button[type="submit"] {
+    margin-left: 10px;
+}
+#tournament {
+    color: black;
+}
+input[type = "date"] {
+    background-color: #262626;
+    color: #00ace6;
+}
+input[type = "number"] {
+    background-color: #262626;
+    color: #00ace6;
+}
+form {
+    margin-left: 10px;
+}
+a {
+    margin-left: 10px;
+}

@@ -1,0 +1,25 @@
+<div>
+    <h2>Current tournaments</h2>
+    
+    <div *ngIf="show">
+      {{tourn.tournamentName}} <br>
+      Date: {{tourn.tournamentDate | date}} <br>
+      Organizer: {{tourn.tournamentOrganizer.orgLogin.userName}} <br>
+      Judge:  <span *ngIf = "!(tourn.tournamentJudge === null)">{{tourn.tournamentJudge.judgeLogin.userName}}</span> <br>
+      Player List: <span *ngFor = "let player of tourn.tournamentBracket">{{player.login.userName}}<br/></span><br>
+      Ruleset: <br>
+      Minutes per Match: {{tourn.ruleset.timed}}<br>
+      Stocks per Match:  {{tourn.ruleset.stock}}<br>
+      <span *ngIf="tourn.ruleset.supers; else elseBlock" >Super Bars On</span>
+      <ng-template #elseBlock>Super Bars Off</ng-template>
+      <br>
+    </div>
+        <span *ngFor = "let tournament of currentTournaments; let i = index;" class="tourn" >{{tournament.tournamentName}}
+        <button type = "btn btn-primary" (click)="viewTournInfo(i)">View</button>
+        <button type = "btn btn-primary" (click)="addJudgeToTournament(i)">Judge</button>
+        <br/>
+        </span> 
+  </div>
+  <br/>
+  <a routerLink="/judge">Back to Judge Menu</a>
+  
