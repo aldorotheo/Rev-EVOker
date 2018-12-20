@@ -1,0 +1,24 @@
+
+
+
+<form method="get" id="createtournament" (ngSubmit)="addTournament()">
+
+  <div class="form-group">
+    <label>Tournament Name</label> <br/> <input type="text" class="form-control"
+  placeholder="Tournament Name" name="tournamentName" [(ngModel)]="tournamentName" required>
+  {{date | date}}
+  <input type="date" min={{min}} [(ngModel)]="date" [ngModelOptions]="{standalone: true}"/>
+  <h2>Ruleset Setup</h2>
+  <label>Match Length</label>
+  <input type="number" class="form-control" placeholder="Enter number of minutes (if timed)" [(ngModel)]="timed" [ngModelOptions]="{standalone: true}">
+  <label>Stock Amount</label>
+  <input type="number" class="form-control" placeholder="Enter number of lives (if stock)" [(ngModel)]="stock" [ngModelOptions]="{standalone: true}">
+  <label>Super Bar</label> <br/>
+  <input type="radio" name="supers" value="1" [(ngModel)]="supers" [ngModelOptions]="{standalone: true}">On
+  <br>
+  <input type="radio" name="supers" value="0" [(ngModel)]="supers" [ngModelOptions]="{standalone: true}">Off
+  </div>
+    <button type="submit" class="btn btn-primary" id="tournament" >Create Tournament</button>
+</form>
+<br/>
+<a routerLink="/organizer">Back to Organizer menu</a>

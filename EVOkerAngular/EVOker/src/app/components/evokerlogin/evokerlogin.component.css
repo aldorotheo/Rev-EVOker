@@ -1,0 +1,32 @@
+.form-group {
+    text-align:left;
+    align-content: center;
+	width:400px;
+    margin:auto;
+    color:#00ace6;
+	padding: 5px;
+}
+
+#evokerlogin {
+    color: black;
+}
+
+input[type="text"], textarea {
+
+    background-color : #262626; 
+    color: #00ace6;
+  
+  }
+
+input[type="password"], textarea {
+    background-color : #262626;
+    color: #00ace6;
+}
+
+::placeholder {
+    color: #004d99;
+}
+
+#login {
+    padding-top:200px;
+}
