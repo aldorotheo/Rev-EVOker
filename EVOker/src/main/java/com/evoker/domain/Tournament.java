@@ -117,7 +117,6 @@ public class Tournament {
 	}
 	public Tournament() {
 		super();
-		this.tournamentJudge = new Judge();
 		// TODO Auto-generated constructor stub
 	}
 	

@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.evoker.domain.JudgeTourn;
 import com.evoker.domain.OrgTourn;
 import com.evoker.domain.Organizer;
 import com.evoker.domain.PlayerTourn;
@@ -42,12 +41,5 @@ public class TournamentController {
 	@ResponseBody
 	public List<Tournament> addPlayerToTournament(@RequestBody PlayerTourn playerTourn) {
 		return tournServ.addPlayerToTournament(playerTourn.getPlayer(), playerTourn.getTournament());		
-	}
-	
-	@PostMapping(path="/judge", consumes="application/json", produces="application/json")
-	@ResponseBody
-	public List<Tournament> addJudgeToTournament(@RequestBody JudgeTourn judgeTourn) {
-		System.out.println(judgeTourn);
-		return tournServ.addJudgeToTournament(judgeTourn.getJudge(), judgeTourn.getTournament());
 	}
 }

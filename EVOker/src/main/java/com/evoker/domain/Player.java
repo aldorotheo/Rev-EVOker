@@ -67,20 +67,6 @@ public class Player {
 	public Login getLogin() {
 		return login;
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Player other = (Player) obj;
-		if (playerID != other.playerID)
-			return false;
-		return true;
-	}
 	public void setLogin(Login login) {
 		this.login = login;
 	}
